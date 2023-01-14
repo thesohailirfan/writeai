@@ -1,0 +1,28 @@
+
+.home{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    max-width: 100vw;
+}
+body{
+    max-width: 100vw;
+}
+
+.homecontent{
+    background-color: transparent;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 90vw 70vh;
+    height: 70vh;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+
+.button{
+    font-size: 7px
+}
