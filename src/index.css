@@ -3,7 +3,7 @@
   padding: 0px;
   box-sizing: border-box;
   font-family: "Mint type vinmonopro", sans-serif;
-  color: #fff;
+  color: #000;
   /* border: 1px solid #fff */
 }
 
@@ -40,8 +40,8 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #000000;
-  color: #FFFFFF;
+  background-color: #666;
+  color: #000FFF;
 }
 
 h1{
@@ -74,7 +74,7 @@ input:-webkit-autofill:active {
     -webkit-box-shadow: 0 0 0 30px rgba(0, 0, 0, 0) inset !important;
     -webkit-transition-delay: 9999s;
    transition-delay: 9999s;
-    -webkit-text-fill-color: #fff !important;
+    -webkit-text-fill-color: #000 !important;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
     box-shadow: none;

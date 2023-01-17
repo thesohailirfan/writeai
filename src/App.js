@@ -1,6 +1,5 @@
 import React, { useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-//import { AuthProvider } from "./contexts/AuthContext";
 // eslint-disable-next-line
 import PrivateRoute from "./PrivateRoute";
 import './index.css';
@@ -11,30 +10,35 @@ import Home from "./pages/home/Home"
 import './App.css';
 import Error from "./pages/error/error";
 import { decrypt, encrypt } from "./encryption";
+import SignUp from "./pages/signup";
+import SignUpOTP from "./pages/signupOTP";
+import { AuthProvider } from "./contexts/AuthContext";
+import Login from "./pages/login";
 
 
 
 function App() {
   return (
     <div style={{ minHeight: "100vh" }}>
+      <AuthProvider>
       <Router>
-        {/* <AuthProvider> */}
           <Routes>
 
-            {/* <Route
-                path="/dashboard"
+            <Route
+                path="/"
                 element={
                   <PrivateRoute>
-                    < CustomerJourney />
+                    <Home />
                   </PrivateRoute>
                 }
-              /> */}
-
-            <Route path="/" element={<Home />} />
+              />
+            <Route path="/signup" element={<SignUp />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/confirm" element={<SignUpOTP />} />
             <Route path="*" element={<Error />}></Route>
           </Routes>
-        {/* </AuthProvider> */}
       </Router>
+      </AuthProvider>
     </div>
   );
 }
