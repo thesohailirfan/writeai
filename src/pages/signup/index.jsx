@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import styles from "./styles.module.css";
 import { useNavigate } from "react-router-dom";
 import 'react-phone-number-input/style.css'
-import PhoneInput from 'react-phone-number-input'
 import { useAuth } from "../../contexts/AuthContext";
+
+import logo from "../../assets/logo192.png"
 
 export default function SignUp(props) {
   const {signup, confirmSignUp} = useAuth()
@@ -47,49 +48,25 @@ export default function SignUp(props) {
   return (
     <>
       <div className={styles.body}>
-        {
-          !toggle &&
-          <>
-            <input type="text"
-            placeholder="Name"
-              value={name}
-              onChange={(e)=>setName(e.target.value)}
-            />
-            <input type="email"
-            placeholder="Email"
-              value={email}
-              onChange={(e)=>setEmail(e.target.value)}
-            />
-            <input type="password"
-            placeholder="Password"
-              value={pass}
-              onChange={(e)=>setPass(e.target.value)}
-            />
-            <input type="password"
-            placeholder="Confirm Password"
-              value={passConfirm}
-              onChange={(e)=>setPassConfirm(e.target.value)}
-            />
-            <PhoneInput
-              placeholder="Enter phone number"
-              value={phone}
-              onChange={setPhone}
-              />
-            <button onClick={()=>handleSubmit()}>Create Account</button></>
-        }
+        <div className="w-[95%] mx-auto flex flex-row justify-between items-center mt-5">
+          <p className="text-[#dcdedf] text-[15px] cursor-pointer"><i className="fa-solid fa-chevron-left text-[#dcdedf] mr-5"></i> Back  To  Store</p>
+          <div className="flex flex-row justify-evenly items-center w-[20%]">
+            <p className="text-[#dcdedf] text-lg cursor-pointer">Not A Member?</p>
+            <p className="text-[#dcdedf] text-lg font-semibold border-[#dcdedf] border-2 px-5 py-2 rounded cursor-pointer">Sign Up</p>
+          </div>
+        </div>
 
-        {
-          toggle &&
-          <>
-            <input type="text"
-            placeholder="Enter OTP"
-              value={otp}
-              onChange={(e)=>setOtp(e.target.value)}
-            />
-
-            <button onClick={()=>verifyOTP()}>Verify</button>
-          </>
-        }
+        <img src={logo} alt="" height={"150"} width={"150"} className="mx-auto mt-20 mb-20" />
+        <div className="border-t border-[#698184] w-[350px] pt-4 pl-5 mx-auto">
+          <p className="uppercase text-[#698184] text-[13px] font-semibold tracking-widest">Email Address</p>
+          <input type="text" className=" bg-transparent text-[#dcdedf] font-semibold tracking-widest mt-4" value={"test@test.com"} />
+        </div>
+        <div className="border-t border-[#698184] w-[350px] pt-4 pl-5 mx-auto mt-5">
+          <p className="uppercase text-[#698184] text-[13px] font-semibold tracking-widest">Password</p>
+          <input type="password" className=" bg-transparent text-[#dcdedf] font-semibold tracking-widest mt-4" value={"test@test.com"} />
+        </div>
+        <p className="bg-[#a7b7b8] text-[rgba(40,56,60,1)] w-min mx-auto font-semibold px-36 py-4 rounded mt-5">Login</p>
+        
       </div>
     </>
 

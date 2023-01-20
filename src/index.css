@@ -92,3 +92,7 @@ input:-webkit-autofill:active {
   }
 
 }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

@@ -1,16 +1,8 @@
-
-.body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    width: 100vw;
-    height: 100vh;
-}
-
 body{
     max-width: 100vw;
+    background: rgb(40,56,60);
+    background: linear-gradient(153deg, rgba(40,56,60,1) 35%, rgba(91,128,129,1) 100%);
+    overflow: hidden;
 }
 
 .homecontent{
